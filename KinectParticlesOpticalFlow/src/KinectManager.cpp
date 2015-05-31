@@ -296,7 +296,7 @@ void KinectManager::threadedFunction()
 		{	
 			lock();
 
-				colorPixels.setFromPixels( kinect.getPixelsRef().getPixels(), kinect.getWidth(), kinect.getHeight(), 3 );
+				colorPixels.setFromPixels( kinect.getPixels(), kinect.getWidth(), kinect.getHeight(), 3 );
 				colorPixelsMat = toCv( colorPixels );
 			
 				depthPixelsChar.setFromPixels( kinect.getDepthPixels(), kinect.getWidth(), kinect.getHeight(), 1 );
